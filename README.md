@@ -48,3 +48,41 @@ select User,Host from mysql.user;
 exit
 ```
 ![image](https://github.com/Byzgaev-I/DDL-DML/blob/main/2.png)
+
+1.4. Дайте все права для пользователя sys_temp
+
+```
+mysql -u root -p 
+grant ALL PRIVILEGES on *.* to 'sys_temp'@'%' with GRANT option;
+flush privileges;
+exit
+```
+1.5. Выполните запрос на получение списка прав для пользователя sys_temp. (скриншот)
+
+```
+mysql -u root -p 
+show grants for 'sys_temp'@'%';
+exit
+```
+
+![image](https://github.com/Byzgaev-I/DDL-DML/blob/main/4.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
