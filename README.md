@@ -35,8 +35,16 @@ sudo systemctl status mysql.service
 
 1.2 Создайте учётную запись sys_temp
 
+```
 mysql -u root -p 
 create user 'sys_temp'@'%' identified by '1234';
 exit
+```
+1.3. Выполните запрос на получение списка пользователей в базе данных. (скриншот)
 
+```
+mysql -u root -p 
+select User,Host from mysql.user;
+exit
+```
 ![image](https://github.com/Byzgaev-I/DDL-DML/blob/main/2.png)
