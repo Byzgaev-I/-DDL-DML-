@@ -25,14 +25,17 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 
 В Debian и его производных, начиная с определенного момента, пакет mysql-server был заменен на mariadb-server в официальных репозиториях, так как MariaDB стал форком MySQL
 и заменил его во многих дистрибутивах Linux из-за опасений, связанных с правами собственности на MySQL
+
 ```
-sudo apt update
-sudo apt install gnupg
-wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
-sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
-sudo apt update
-sudo apt install -y mysql-server # и задаём пароль
+установил и смотрим статус 
 sudo systemctl status mysql.service
 
 ```
+![scrin1]()
+
+1.2 Создайте учётную запись sys_temp
+
+mysql -u root -p 
+create user 'sys_temp'@'%' identified by '12345678';
+exit
 
