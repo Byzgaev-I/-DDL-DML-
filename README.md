@@ -31,7 +31,7 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 sudo systemctl status mysql.service
 
 ```
-![scrin1]()
+![image](https://github.com/Byzgaev-I/DDL-DML/blob/main/1.png)
 
 1.2 Создайте учётную запись sys_temp
 
