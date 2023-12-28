@@ -18,3 +18,21 @@ ALTER USER 'sys_test'@'localhost' IDENTIFIED WITH mysql_native_password BY 'pass
 *Результатом работы должны быть скриншоты обозначенных заданий, а также простыня со всеми запросами.*  
 
 ---  
+
+### Решение  
+
+1.1 Поднимите чистый инстанс MySQL версии 8.0+. Можно использовать локальный сервер или контейнер Docker
+
+В Debian и его производных, начиная с определенного момента, пакет mysql-server был заменен на mariadb-server в официальных репозиториях, так как MariaDB стал форком MySQL
+и заменил его во многих дистрибутивах Linux из-за опасений, связанных с правами собственности на MySQL
+```
+sudo apt update
+sudo apt install gnupg
+wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+sudo apt update
+sudo apt install -y mysql-server # и задаём пароль
+sudo systemctl status mysql.service
+
+```
+
